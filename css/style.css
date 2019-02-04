@@ -13,25 +13,30 @@ body {
 .flex-container {
     display: flex;
     background-color: #fff;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 .box {
     height: 100px;
-    min-width: 200px;
-    flex-grow: 1;
+    /* min-width: 500px; */
+    /* flex-basis: 500px; */
+    /* flex-grow: 1; */
+    flex: 1 0 200px;
 }
 .one {
     background: red;
     /* flex-grow: 2; */
     /* flex-shrink: 4; */
+    /* flex-basis: 100px; */
 }
 .two {
     background: blue;
     /* flex-grow: 3; */
     /* flex-shrink: 5; */
+    /* flex-basis: 200px; */
 }
 .three {
     background: green;
     /* flex-grow: 1; */
     /* flex-shrink: 6; */
+    /* flex-basis: 300px; */
 }
