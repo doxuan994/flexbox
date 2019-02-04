@@ -13,23 +13,25 @@ body {
 .flex-container {
     display: flex;
     background-color: #fff;
+    flex-wrap: wrap-reverse;
 }
 .box {
     height: 100px;
-    width: 320px;
+    min-width: 200px;
+    flex-grow: 1;
 }
 .one {
     background: red;
     /* flex-grow: 2; */
-    flex-shrink: 4;
+    /* flex-shrink: 4; */
 }
 .two {
     background: blue;
     /* flex-grow: 3; */
-    flex-shrink: 5;
+    /* flex-shrink: 5; */
 }
 .three {
     background: green;
     /* flex-grow: 1; */
-    flex-shrink: 6;
+    /* flex-shrink: 6; */
 }
