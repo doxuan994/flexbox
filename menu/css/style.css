@@ -23,29 +23,75 @@ nav a {
     text-align: center;
     color: #fff;
     display: block;
-    padding: 10px;
+    padding: 15px;
     /* background: #777; */
 }
 nav a:hover {
     background: #555;
 }
 
+input#menu {
+    display: none;
+}
 
+/* Dropdown menu styles */
+@media screen and (max-width: 768px) {
+    .dropdown-menu {
+        background: #fff;
+    }
+    .menu-content {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.2s ease-in;
+        transition: max-height 0.2s ease-in;
+    }
+    .dropdown-menu label {
+        display: block;
+        cursor: pointer;
+        background: url("../img/001-menu.png") no-repeat left center;
+        -webkit-transition: background 0.2s linear;
+        transition: background 0.2s linear;
+        padding: 15px 0 15px 40px;
+    }
 
+    input#menu {
+        display: none;
+    }
 
+    /* Toggle effect */
+    input:checked ~ label {
+        background: url("../img/002-x-mark.png") no-repeat left center;
+        -webkit-transition: background 0.2s linear;
+        transition: background 0.2s linear;
+    }
 
+    input:checked ~ .menu-content {
+        max-height: 100%;
+        -webkit-transition: max-height 0.2s ease-in;
+        transition: max-height 0.2s ease-in;
+    }
+}
 
 
 /* Flex styles */
 @media screen and (min-width: 768px) {
 
     nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
     nav li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
         flex: 1 1 0;
     }
 
+    label {
+        display: none;
+    }
 }
